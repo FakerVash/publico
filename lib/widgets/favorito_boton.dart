@@ -26,6 +26,14 @@ class _FavoritoBotonState extends State<FavoritoBoton> {
   }
 
   @override
+  void didUpdateWidget(covariant FavoritoBoton oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.favoritoInicial != widget.favoritoInicial) {
+      _favorito = widget.favoritoInicial;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return IconButton(
       icon: Icon(
